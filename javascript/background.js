@@ -1768,8 +1768,8 @@
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.local.set(
     {
-      alerts: false,
-      alertSounds: false,
+      alerts: true,
+      alertSounds: true,
       sound: "bell",
       streamers: [],
     },
@@ -1840,19 +1840,25 @@ function ResponseHandler(resp, type, pass) {
 // Function to update streamer status and alert
 function UpdateStreamer(name, status) {
   chrome.storage.local.get("streamers", function (data) {
+    let alertSounds;
     let Streamers = [...data.streamers];
     let Str = Streamers.find((S) => S.name == name);
     if (!Str) {
       return;
     }
     if (Str.status && !Str.notified) {
+      chrome.storage.local.get("alertSounds", function (data) {
+        alertSounds = data.alertSounds;
+      });
       chrome.storage.local.get("sound", function (data) {
         let currentSound = data.sound;
         let sounds = new this.Howl({
           src: [`/sounds/${currentSound}.wav`],
           volume: 0.25,
         });
-        sounds.play();
+        if (alertSounds) {
+          sounds.play();
+        }
       });
 
       Str.notified = true;

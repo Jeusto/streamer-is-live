@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Streamer is live",
   "description": "A chrome extension to quickly check if your favorite streamers are online and what category they’re currently streaming on.",
-  "version": "0.8",
+  "version": "1.0",
   "author": "Jeusto - Arhun Saday",
   "options_page": "options.html",
   "background": {
