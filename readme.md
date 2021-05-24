@@ -9,5 +9,5 @@ if not)
 ### To do
 
 - [x] Options to disable alerts and sounds
+- [x] Fix the "streamer is live" alert dialog
 - [ ] Show current category next to streamer's name
-- [ ] Fix the "streamer is live" alert dialog
