@@ -42,8 +42,6 @@
   },
   "permissions": [
     "storage",
-    "unlimitedStorage",
-    "activeTab",
-    "declarativeContent"
+    "unlimitedStorage"
   ]
 }
