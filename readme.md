@@ -6,4 +6,6 @@ You can favorite a streamer to see him on top of the list and the
 extension's icon will also adapt to his status (purple if live, gray
 if not)
 
+Download it on the Chrome web store: https://bit.ly/streamer-is-live
+
 ![demo](https://i.imgur.com/4G9bzbG.gif)
